@@ -12,6 +12,17 @@ class Person() {
         val person = PersonKotlin(25)
         person.compute()
         IWantItGlobal()
+        person.createParent {
+            originalCountry = "France"
+        }.originalCountry = "England"
+
+        person.applyPerson {
+
+        }
+        person.apply {
+
+        }
+
         return personList.filter { it.age == age && it.getName().isNotBlank() }.map { it.status }
     }
 }
